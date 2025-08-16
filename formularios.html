@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Exemplo</title>
     <style>
+        :root {
+            --primary-bg: #f2f6fc;
+            --primary-color: #2c3e50;
+            --form-bg: #fff;
+            --form-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+            --input-bg: #f8fafc;
+            --input-border: #d0d7de;
+            --input-focus: #2980b9;
+            --button-bg: #2980b9;
+            --button-hover: #1c5d99;
+            --button-color: #fff;
+            --border-radius: 12px;
+        }
+
         body {
-            background: #f2f6fc;
+            background: var(--primary-bg);
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -15,67 +29,62 @@
 
         h1 {
             text-align: center;
-            color: #2c3e50;
+            color: var(--primary-color);
             margin-top: 40px;
         }
 
         form {
-            background: #fff;
+            background: var(--form-bg);
             max-width: 400px;
             margin: 40px auto;
             padding: 30px 40px 25px 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+            border-radius: var(--border-radius);
+            box-shadow: var(--form-shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
         label {
-            display: block;
-            margin-bottom: 8px;
             color: #34495e;
             font-weight: 500;
+            margin-bottom: 6px;
         }
 
         input[type="text"],
         input[type="email"],
         input[type="password"],
-        select {
+        select,
+        textarea {
             width: 100%;
             padding: 10px 12px;
-            margin-bottom: 18px;
-            border: 1px solid #d0d7de;
+            border: 1px solid var(--input-border);
             border-radius: 6px;
             font-size: 1rem;
-            background: #f8fafc;
+            background: var(--input-bg);
             transition: border-color 0.2s;
         }
 
         input:focus,
         textarea:focus,
         select:focus {
-            border-color: #2980b9;
+            border-color: var(--input-focus);
             outline: none;
         }
 
         input[type="checkbox"] {
             margin-right: 8px;
         }
+
         textarea {
-            width: 100%;
-            padding: 10px 12px;
-            margin-bottom: 18px;
-            border: 1px solid #d0d7de;
-            border-radius: 6px;
-            font-size: 1rem;
-            background: #f8fafc;
             resize: vertical;
-            transition: border-color 0.2s;
         }
 
         button[type="submit"] {
             width: 100%;
             padding: 12px;
-            background: #2980b9;
-            color: #fff;
+            background: var(--button-bg);
+            color: var(--button-color);
             border: none;
             border-radius: 6px;
             font-size: 1.1rem;
@@ -85,50 +94,131 @@
         }
 
         button[type="submit"]:hover {
-            background: #1c5d99;
+            background: var(--button-hover);
+        }
+
+        /* Dark mode */
+        .dracula-mode {
+            background: #282a36;
+            color: #f8f8f2;
+        }
+
+        .dracula-mode form {
+            background: #44475a;
+            box-shadow: 0 4px 24px rgba(68, 71, 90, 0.16);
+        }
+
+        .dracula-mode h1 {
+            color: #bd93f9;
+        }
+
+        .dracula-mode label {
+            color: #ff79c6;
+        }
+
+        .dracula-mode input[type="text"],
+        .dracula-mode input[type="email"],
+        .dracula-mode input[type="password"],
+        .dracula-mode select,
+        .dracula-mode textarea {
+            background: #282a36;
+            color: #f8f8f2;
+            border-color: #bd93f9;
+        }
+
+        .dracula-mode input:focus,
+        .dracula-mode textarea:focus,
+        .dracula-mode select:focus {
+            border-color: #ff79c6;
+        }
+
+        .dracula-mode button[type="submit"] {
+            background: #bd93f9;
+            color: #282a36;
+        }
+
+        .dracula-mode button[type="submit"]:hover {
+            background: #ff79c6;
+            color: #282a36;
+        }
+
+        /* Responsivo */
+        @media (max-width: 500px) {
+            form {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .dark-toggle-btn {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            padding: 10px 18px;
+            background: #bd93f9;
+            color: #282a36;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            z-index: 1000;
+        }
+
+        @media (max-width: 500px) {
+            .dark-toggle-btn {
+                top: 8px;
+                right: 8px;
+                padding: 8px 12px;
+            }
         }
     </style>
-</head>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Exemplo</title>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dracula-mode');
+        }
+    </script>
 </head>
 
 <body>
+    <button class="dark-toggle-btn" onclick="toggleDarkMode()" aria-label="Alternar modo escuro">
+        🌙
+    </button>
     <h1>Formulário de Cadastro</h1>
-    <form action="/submit" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-        <br><br>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
-        <br><br>
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="8" required></textarea>
-        <br><br>
-
-        <label for="genero">Gênero:</label>
-        <select id="genero" name="genero">
-            <option value="masculino">Masculino</option>
-            <option value="feminino">Feminino</option>
-            <option value="outro">Outro</option>
-        </select>
-        <br><br>
-
-        <label for="termos">
-            <input type="checkbox" id="termos" name="termos" required>
-            Aceito os termos e condições
-        </label>
-        <br><br>
-
-        <button type="submit">Enviar</button>
+    <form action="/submit" method="post" autocomplete="on">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required autocomplete="name">
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required autocomplete="new-password">
+        </div>
+        <div>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="8" required></textarea>
+        </div>
+        <div>
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+        <div>
+            <label for="termos">
+                <input type="checkbox" id="termos" name="termos" required>
+                Aceito os termos e condições
+            </label>
+        </div>
+        <button type="submit" formaction=".\index.html">Enviar</button>
     </form>
 </body>
 
