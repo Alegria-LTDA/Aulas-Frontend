@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Portfólio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        a {
+            color: #333;
+        }
+
+        .projetos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .projeto {
+            background: #eee;
+            padding: 20px;
+            border-radius: 6px;
+            flex: 1 1 250px;
+            min-width: 250px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        button {
+            margin: auto;
+            padding: 10px 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src=".\imagens\oi.jpg" alt="Foto de Fernando">
+        <h1>Fernando Santa Rita Bastos</h1>
+        <p>Desenvolvedor Web | Front-end | Back-end</p>
+    </header>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+            Sou um desenvolvedor apaixonado por tecnologia, com experiência em criação de sites e aplicações web.
+            Gosto de aprender novas ferramentas e enfrentar desafios.
+        </p>
+    </section>
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="projetos">
+            <div class="projeto">
+                <h3>Página de formulário</h3>
+                <p>Projeto de formulário. Pouco estilizado, mas funcional.</p><br>
+                <a href=".\formularios.html" target="_blank"><button>Ir para a página</button></a>
+            </div>
+            <div class="projeto">
+
+                <h3>Página de exemplo de tabelas</h3>
+
+                <p>Página para ilustrar tipos diferentes de tabelas em html, com exemplos da mesma.</p>
+                <a href=".\index.html" target="_blank"><button>Ir para a página</button></a>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+        </div>
+    </section>
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Email: <a href="mailto:fernandosrbastos@gmail.com">fernandosrbastos@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/fernandosrbastos" target="_blank">fernandosrbastos</a></p>
+    </section>
+    <footer>
+        &copy; 2025 Fernando Santa Rita Bastos. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>

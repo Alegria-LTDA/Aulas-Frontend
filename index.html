@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        caption {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Exemplo de Tabelas em HTML</h1>
+    </header>
+    <main>
+        <table>
+            <caption>Tabela de Alunos</caption>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Curso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João Silva</td>
+                    <td>20</td>
+                    <td>Engenharia</td>
+                </tr>
+                <tr>
+                    <td>Maria Oliveira</td>
+                    <td>22</td>
+                    <td>Medicina</td>
+                </tr>
+                <tr>
+                    <td>Carlos Santos</td>
+                    <td>19</td>
+                    <td>Arquitetura</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>Tabela de Produtos</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Notebook</td>
+                    <td>R$ 3.500,00</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Smartphone</td>
+                    <td>R$ 2.000,00</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Fone de Ouvido</td>
+                    <td>R$ 150,00</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Resumo</h3>
+        <p>As tabelas acima demonstram como organizar dados de forma clara e eficiente utilizando HTML e CSS. A primeira
+            tabela apresenta informações sobre alunos, enquanto a segunda tabela lista produtos com seus respectivos
+            preços e quantidades.</p>
+        <p>Utilizar tabelas é uma ótima maneira de estruturar dados tabulares, facilitando a leitura e compreensão das
+            informações apresentadas.</p>
+        <p>Experimente personalizar as tabelas com diferentes estilos e cores para melhor se adequar ao design do seu
+            site!</p>
+        <p><strong>&lt;table&gt;</strong>: Define uma tabela.</p>
+        <p><strong>&lt;caption&gt;</strong>: Fornece um título ou legenda para a tabela.</p>
+        <p><strong>&lt;thead&gt;</strong>: Agrupa o cabeçalho da tabela.</p>
+        <p><strong>&lt;tr&gt;</strong>: Define uma linha na tabela.</p>
+        <p><strong>&lt;th&gt;</strong>: Define uma célula de cabeçalho em uma tabela.</p>
+        <p><strong>&lt;tbody&gt;</strong>: Agrupa o corpo da tabela.</p>
+        <p><strong>&lt;td&gt;</strong>: Define uma célula de dados em uma tabela.</p>
+        <a href="#tags">Ir para seção de tags</a><br>
+        <!-- Assim é feito um comentário -->
+        <br>
+        <a href=".\formularios.html" target="_blank">Ir para a página de formulários</a>
+        <image src=".\imagens\image.jpg" style="display:block; margin:20px auto;">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <section id="tags">
+                <ul>
+                    <li><strong>&lt;form&gt;</strong>: Container de formulário.</li>
+                    <li><strong>&lt;input&gt;</strong>: Campo de entrada.</li>
+                    <li><strong>&lt;label&gt;</strong>: Rótulo para um elemento de formulário.</li>
+                    <li><strong>&lt;textarea&gt;</strong>: Área de texto multilinha.</li>
+                    <li><strong>&lt;button&gt;</strong>: Botão clicável.</li>
+                    <li><strong>&lt;select&gt;</strong>: Menu suspenso.</li>
+                    <li><strong>&lt;option&gt;</strong>: Opção dentro de um menu suspenso.</li>
+                    <li><strong>&lt;fieldset&gt;</strong>: Agrupa elementos relacionados em um formulário.</li>
+                    <li><strong>&lt;legend&gt;</strong>: Título para um grupo de elementos em um formulário.</li>
+                    <li><strong>&lt;datalist&gt;</strong>: Lista de opções pré-definidas para um campo de entrada.</li>
+                    <li><strong>&lt;output&gt;</strong>: Resultado de um cálculo ou ação em um formulário.</li>
+                    <li><strong>&lt;progress&gt;</strong>: Barra de progresso.</li>
+                    <li><strong>&lt;meter&gt;</strong>: Medidor de valor escalar.</li>
+                    <li><strong>required</strong>: Atributo que indica que um campo é obrigatório.</li>
+                    <li><strong>placeholder</strong>: Atributo que fornece uma dica sobre o valor esperado em um campo
+                        de entrada.</li>
+                    <li><strong>autocomplete</strong>: Atributo que indica se o navegador deve preencher automaticamente
+                        um campo de entrada.</li>
+                    <li><strong>novalidate</strong>: Atributo que desativa a validação do formulário.</li>
+                    <li><strong>formaction</strong>: Atributo que especifica a URL para onde os dados do formulário
+                        serão enviados.</li>
+                    <li><strong>formenctype</strong>: Atributo que especifica o tipo de codificação dos dados do
+                        formulário.</li>
+                    <li><strong>formmethod</strong>: Atributo que especifica o método HTTP para enviar os dados do
+                        formulário.</li>
+                    <li><strong>formtarget</strong>: Atributo que especifica onde exibir a resposta após o envio do
+                        formulário.</li>
+                </ul>
+                <h3>Lista Ordenada</h3>
+                <p>Uma lista ordenada é uma lista numerada, onde cada item é precedido por um número ou letra. É útil
+                    quando a ordem dos itens é importante.</p>
+                <p>Exemplo de lista ordenada:</p>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+            </section>
+    </main>
+</body>
+
+</html>
