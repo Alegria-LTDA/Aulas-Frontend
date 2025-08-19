@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores e Hierarquia CSS</title>
+    <style>
+        /* Seletor universal */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Seletor de elemento */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Seletor de classe */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Seletor de ID */
+        #titulo-principal {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Seletor descendente */
+        .exemplo-box p {
+            margin-bottom: 10px;
+        }
+
+        /* Seletor filho direto */
+        .exemplo-box>h2 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        /* Seletor de atributo */
+        input[type="text"] {
+            padding: 5px;
+            border: 1px solid #bdc3c7;
+        }
+
+        /* Pseudo-classes */
+        .exemplo-box:hover {
+            background-color: #f5f6fa;
+            padding: 20px;
+        }
+
+        /* Pseudo-elementos */
+        p::first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="titulo-principal">Guia de Seletores e Hierarquia CSS</h1>
+
+        <div class="exemplo-box">
+            <h2>Tipos de Seletores</h2>
+            <p>Seletor Universal (*): Aplica estilos a todos os elementos.</p>
+            <p>Seletor de Elemento (p, div, h1): Seleciona elementos HTML específicos.</p>
+            <p>Seletor de Classe (.classe): Seleciona elementos com uma classe específica.</p>
+            <p>Seletor de ID (#id): Seleciona um elemento único com ID específico.</p>
+            <p>Para ver a implementação dos seletores, inspecione a página.</p>
+        </div>
+
+        <div class="exemplo-box">
+            <h2>Hierarquia e Especificidade</h2>
+            <p>1. Estilo inline (maior prioridade)</p>
+            <p>2. IDs</p>
+            <p>3. Classes, atributos e pseudo-classes</p>
+            <p>4. Elementos e pseudo-elementos</p>
+        </div>
+
+        <div class="exemplo-box">
+            <h2>Exemplo de Formulário</h2>
+            <form>
+                <input type="text" placeholder="Digite algo...">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
